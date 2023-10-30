@@ -84,5 +84,6 @@ const filtrar_atletas = (texto) =>{
     return lista_filtrada;
 }
 
+criar_atletas(filtrar_atletas('y'));
 
-
+    
