@@ -9,9 +9,13 @@ container_filtro.style.textAlign = 'center';
 btn_pesquisa.innerHTML = 'Pesquisar';
 btn_pesquisa.onclick =() => {
     atletas_container.innerHTML = '';
-    criar_atletas(filtrar_atletas(texto_pesquisa.value))
+    criar_atletas(filtrar_atletas(texto_pesquisa.value));
 
 };
+texto_pesquisa.onchange = () => {
+    atletas_container.innerHTML = '';
+    criar_atletas(filtrar_atletas(texto_pesquisa.value));
+}
 
 
 container_filtro.appendChild(texto_pesquisa);
@@ -84,6 +88,5 @@ const filtrar_atletas = (texto) =>{
     return lista_filtrada;
 }
 
-criar_atletas(filtrar_atletas('y'));
-
+criar_atletas(atletas);
     
